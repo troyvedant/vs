@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
@@ -30,7 +31,16 @@ gem 'jquery-rails'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
+gem 'less-rails', '~> 2.3.2'
 
+  gem 'coffee-rails', '~> 3.2.2'
+
+  gem 'therubyracer', '>= 0.11.4', :require => 'v8'
+
+  gem 'uglifier', '>= 1.0.3'
+
+  gem 'twitter-bootswatch-rails', '~> 2.3.2'
+  gem 'twitter-bootswatch-rails-fontawesome'
 # Use unicorn as the app server
 # gem 'unicorn'
 gem 'pg'
