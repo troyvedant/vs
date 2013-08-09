@@ -1,14 +1,182 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Vs</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Vedant Singhania" %></title>
+    <%= csrf_meta_tags %>
 
-<%= yield %>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
 
-</body>
+    <%= stylesheet_link_tag "simplex", :media => "all" %>
+
+    <%= yield(:page_stylesheet) if content_for?(:page_stylesheet) %>
+
+  </head>
+  <body>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="navbar navbar-inverse">
+				<div class="navbar-inner">
+					<div class="container-fluid">
+						 <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand">Vedant Singhania</a>
+						<div class="nav-collapse collapse navbar-responsive-collapse">
+							<ul class="nav">
+								
+								
+							</ul>
+							
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+			<div class="row-fluid">
+				<div class="span8">
+					<ul class="nav nav-tabs">
+						<li class="active">
+							<a href="/pages/index">Education</a>
+						</li>
+						<li>
+							<a href="/pages/experience">Experience</a>
+						</li>
+						<li>
+							<a href="/pages/interests">Interests</a>
+						</li>
+						<li class="dropdown pull-right">
+							 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<div class="row-fluid">
+						<div class="span12">
+							<%= yield %>
+						</div>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="hero-unit">
+						<img alt="140x140" src="http://lorempixel.com/140/140/" />
+						<br>
+						<br>
+						<h2>
+							<strong>Vedant Singhania</strong>
+						</h2>
+						
+						<p>
+							This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+						</p>
+						<br>
+						<p>
+							<a class="btn btn-inverse btn-large" href="#">Learn more »</a>
+						</p>
+					</div>
+					<table class="table list-group">
+						<thead>
+							<tr>
+								<th>
+									Languages Spoken:
+								</th>
+								
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									English
+								</td>
+								
+							
+								<td>
+									Hindi
+								</td>
+								
+							</tr>
+							<tr >
+								<td>
+									Bengali (Broken)
+								</td>
+								
+							
+								<td>
+									Java
+								</td>
+								
+							</tr>
+							<tr >
+								<td>
+									C/C++
+								</td>
+								
+							
+								<td>
+									Ruby on Rails
+								</td>
+								
+							</tr>
+							<tr >
+								<td>
+									HTML/CSS
+								</td>
+								
+							
+								<td>
+									Javascript
+								</td>
+								
+							</tr>
+							<tr >
+								<td>
+									VB.Net
+								</td>
+								
+							
+								<td>
+									Objective-C
+								</td>
+								
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+							
+						
+					
+				
+				
+				
+		
+
+    
+
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "simplex" %>
+    <%= yield(:page_javascript) if content_for?(:page_javascript) %>
+  </body>
 </html>
