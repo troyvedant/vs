@@ -12,18 +12,11 @@ gem 'rails', '3.2.13'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'less-rails', '~> 2.3.2'
-
-  gem 'coffee-rails', '~> 3.2.2'
-
-  gem 'therubyracer', '>= 0.11.4', :require => 'v8'
-
-  gem 'uglifier', '>= 1.0.3'
+  
 
   gem 'twitter-bootswatch-rails', '~> 2.3.2'
   gem 'twitter-bootswatch-rails-fontawesome'
-  gem 'twitter-bootswatch-rails-helpers', '>= 2.3'
-  gem 'jquery-rails'
+  
 end
 gem 'twitter-bootswatch-rails-helpers', '>= 2.3'
 gem 'jquery-rails'
@@ -54,6 +47,14 @@ end
 group :production do
   gem 'pg'
   gem 'thin'
+  gem 'less-rails', '~> 2.3.2'
+
+  gem 'coffee-rails', '~> 3.2.2'
+
+  gem 'therubyracer', '>= 0.11.4', :require => 'v8'
+
+  gem 'uglifier', '>= 1.0.3'
+
 end
 # Deploy with Capistrano
 # gem 'capistrano'
