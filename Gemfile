@@ -22,6 +22,8 @@ group :assets do
 
   gem 'twitter-bootswatch-rails', '~> 2.3.2'
   gem 'twitter-bootswatch-rails-fontawesome'
+  gem 'twitter-bootswatch-rails-helpers', '>= 2.3'
+  gem 'jquery-rails'
 end
 gem 'twitter-bootswatch-rails-helpers', '>= 2.3'
 gem 'jquery-rails'
